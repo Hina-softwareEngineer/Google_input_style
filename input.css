@@ -1,0 +1,57 @@
+
+body{
+    margin: 100px;
+    font-family: Arial;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 500px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 48px 40px;
+    text-align: center;
+}
+
+.inputField{
+    position: relative;
+    width: 100%;
+}
+
+.inputField > input{
+    box-sizing: border-box;   
+    width: 100%;
+    font-size: 18px ;
+    padding: 15px 13px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    position: relative;
+    
+}
+
+label{
+    position: absolute;
+    top:15px;
+    left:13px;
+    font-size: 18px;
+    color: grey;
+    pointer-events: none;
+    transition-delay: 0ms;
+    transition-duration: 300ms;
+    transition-timing-function: ease-all;
+}
+
+input:focus{
+    outline:none;
+    border: 2px solid #1a73e8;
+}
+
+.shrink{
+    font-size: 12px;
+    padding: 1px 4px;
+    top:-7px;
+    left:10px;
+    color:#1a73e8;
+    background-color: white;
+}
