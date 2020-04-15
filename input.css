@@ -1,4 +1,5 @@
 
+
 body{
     margin: 100px;
     font-family: Arial;
@@ -10,15 +11,18 @@ body{
     border: 1px solid lightgray;
     border-radius: 10px;
     padding: 48px 40px;
+}
+h1{
     text-align: center;
 }
 
-.inputField{
+.inputField, .password{
     position: relative;
     width: 100%;
+    margin: 15px;
 }
 
-.inputField > input{
+.inputField > input, .password > input{
     box-sizing: border-box;   
     width: 100%;
     font-size: 18px ;
@@ -54,4 +58,26 @@ input:focus{
     left:10px;
     color:#1a73e8;
     background-color: white;
+}
+.emailInvalid{
+    display: flex;
+    font-weight: 600;
+}
+
+.material-icons, .invalid{
+    margin:0;
+    color: red;
+    font-size: 14px;
+    margin:1px;
+}
+
+.material-icons{
+    font-weight: 600;
+    margin: 2px;
+}
+
+p{
+    font-size: 15px;
+    color: #1a73e8;
+    font-weight: 600;
 }
