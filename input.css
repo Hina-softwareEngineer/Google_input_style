@@ -16,22 +16,44 @@ h1{
     text-align: center;
 }
 
-.inputField, .password{
+.inputField{
     position: relative;
     width: 100%;
-    margin: 15px;
+    margin-bottom: 15px;
 }
 
-.inputField > input, .password > input{
+
+.password{
+    position: relative;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.inputField > input{
     box-sizing: border-box;   
     width: 100%;
     font-size: 18px ;
     padding: 15px 13px;
     font-size: 16px;
     border-radius: 5px;
-    border: 1px solid lightgray;
-    position: relative;
+    border: 1px solid lightgray;    
+}
+
+.box > input{
     
+    box-sizing: border-box;   
+    width: 93%;
+    font-size: 18px ;
+    padding: 15px 13px;
+    font-size: 16px;
+    position: relative;
+    border:none;
+
+}
+
+svg{
+    transform: translateY(6px);
 }
 
 label{
@@ -45,9 +67,11 @@ label{
     transition-duration: 300ms;
     transition-timing-function: ease-all;
 }
-
 input:focus{
-    outline:none;
+    outline: none;
+}
+
+.inputField > input:focus{
     border: 2px solid #1a73e8;
 }
 
@@ -64,7 +88,7 @@ input:focus{
     font-weight: 600;
 }
 
-.material-icons, .invalid{
+.warning, .invalid{
     margin:0;
     color: red;
     font-size: 14px;
@@ -80,4 +104,9 @@ p{
     font-size: 15px;
     color: #1a73e8;
     font-weight: 600;
+}
+
+.visible {
+     color: green;
+     border-color: red;
 }
