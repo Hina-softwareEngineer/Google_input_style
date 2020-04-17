@@ -40,6 +40,10 @@ h1{
     border: 1px solid lightgray;    
 }
 
+.box{
+    display: flex;
+}
+
 .box > input{
     
     box-sizing: border-box;   
@@ -53,7 +57,7 @@ h1{
 }
 
 svg{
-    transform: translateY(6px);
+    transform: translateY(12px);
 }
 
 label{
