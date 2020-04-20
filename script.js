@@ -41,10 +41,16 @@ input[0].addEventListener('focusout', function(){
 
 box.addEventListener('click', function(){
     input[1].focus();
+    box.style.border='2px solid #1a73e8';
     label[1].className='shrink';
 
 });
 // change warning a/c to situation 
+box.addEventListener('focusout', function(){
+    box.style.border='1px solid lightgray';
+    label[1].classList.remove('shrink');
+}
+)
 
 let count=0;
 let svg=document.querySelector('svg');
