@@ -1,7 +1,6 @@
 let input=document.querySelectorAll("input");
 let label=document.querySelectorAll('label');
 let invalidEmail=document.querySelector('.invalid');
-// let password=document.querySelector('');
 let box=document.querySelector('.password');
 
 
@@ -17,59 +16,71 @@ setTimeout(function(){
     input[0].focus();
 },10)
 
+
+// email input on focus
 input[0].addEventListener('focus', function(){
     label[0].className='shrink';
+    label[0].style.color='#1a73e8';
+    input[0].style.color='black';
 });
 
-// on focus out
+// email input on focus out
 input[0].addEventListener('focusout', function(){
-    label[0].classList.remove('shrink');
+    if (input[0].value.length <= 0){
+        label[0].classList.remove('shrink');
+    }
+    label[0].style.color='grey';
+    input[0].style.color='gray';
+    
 });
 
 
-// input[1].addEventListener('focus', function(){
-//     label[1].className='shrink';
-//     box.style.border='2px solid #1a73e8';
-    
-// });
 
-// // on focus out
-// input[1].addEventListener('focusout', function(){
-//     label[1].classList.remove('shrink');
-//     box.style.border='1px solid lightgrey';
-// });
-
-box.addEventListener('click', function(e){
+// password input box on focus
+box.addEventListener('click', function(){
     console.log('box')
     input[1].focus();
     box.style.border='2px solid #1a73e8';
     label[1].className='shrink';
+    label[1].style.color='#1a73e8';
+    input[1].style.color='black';
+    
 
 });
-// change warning a/c to situation 
+// password input box on focus out
 box.addEventListener('focusout', function(){
     box.style.border='1px solid lightgray';
-    label[1].classList.remove('shrink');
+    if (input[1].value.length <= 0){
+        label[1].classList.remove('shrink');
+        
+    }
+    label[1].style.color='grey';
+    
+    input[1].style.color='gray';    
 }
 )
 
+
 let count=0;
-let svg=document.querySelector('#eye');
-svg.addEventListener('click',function(){
+
+// the eye symbol for alternate the type of password
+// code.
+eye.addEventListener('click',function(){
     console.log('click')
     input[1].focus();
     eye.innerHTML='';
     if (count==1){
         input[1].setAttribute('type', 'password');
         eye.innerHTML=hiddenEye;
-        console.log('not show');
+        console.log('not show', count);
         count=0;
     }
     else if (count==0){
         input[1].setAttribute('type', 'text');
-        console.log('show');
+        
         eye.innerHTML=showEye;
         count=1;
+        console.log('show', count);
     }
 
 });
